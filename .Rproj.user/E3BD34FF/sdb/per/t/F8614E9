@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "---\ntitle: \"p8105_hw5_lg2973&wp2241\"\n---\n\n### Problem 1\n* data description\n\n* graph 1\n\n* graph 2\n\n* graph 3\n\n### Problem 2\n* data description\n\n* graph 1\n\n* graph 2\n\n* graph 3\n",
+    "created" : 1510776342370.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3466106754",
+    "id" : "F8614E9",
+    "lastKnownWriteTime" : 1510777198,
+    "last_content_update" : 1510777198194,
+    "path" : "C:/Users/gl/Desktop/ds_hw6_problem3/index.Rmd",
+    "project_path" : "index.Rmd",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

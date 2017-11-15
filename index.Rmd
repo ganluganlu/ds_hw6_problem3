@@ -1,0 +1,21 @@
+---
+title: "p8105_hw5_lg2973&wp2241"
+---
+
+### Problem 1
+* data description
+
+* graph 1
+
+* graph 2
+
+* graph 3
+
+### Problem 2
+* data description
+
+* graph 1
+
+* graph 2
+
+* graph 3
