@@ -5,11 +5,8 @@ title: "p8105_hw5_lg2973&wp2241"
 ### Problem 1
 * data description
 
-* graph 1
+Here is the [dashboard](https://wp2241.github.io/p8105_hw6_wp2241/)
 
-* graph 2
-
-* graph 3
 
 ### Problem 2
 * data description
