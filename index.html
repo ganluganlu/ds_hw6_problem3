@@ -11,7 +11,7 @@
 
 
 
-<title>p8105_hw5_lg2973&amp;wp2241</title>
+<title>P8105 HW6</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -22,7 +22,6 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-1.1/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-1.1/highlight.js"></script>
-<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
 
 <style type="text/css">code{white-space: pre;}</style>
 <style type="text/css">
@@ -182,18 +181,6 @@ $(document).ready(function () {
         <li>
   <a href="about.html">About</a>
 </li>
-<li>
-  <a href="mailto:&lt;you@youremail.com&gt;">
-    <span class="fa fa-envelope fa-lg"></span>
-     
-  </a>
-</li>
-<li>
-  <a href="http://github.com/&lt;YOUR_GH_NAME&gt;/">
-    <span class="fa fa-github fa-lg"></span>
-     
-  </a>
-</li>
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -203,24 +190,79 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">p8105_hw5_lg2973&amp;wp2241</h1>
+<h1 class="title toc-ignore">P8105 HW6</h1>
 
 </div>
 
 
-<div id="problem-1" class="section level3">
-<h3>Problem 1</h3>
-<ul>
-<li>data description</li>
-</ul>
-<p>Here is the <a href="https://wp2241.github.io/p8105_hw6_wp2241/">dashboard</a></p>
+<div id="authors-lu-gan-lg2973-weixin-peng-wp2241" class="section level3">
+<h3>Authors: Lu Gan (lg2973) &amp; Weixin Peng (wp2241)</h3>
+<p><br></p>
 </div>
-<div id="problem-2" class="section level3">
-<h3>Problem 2</h3>
+<div id="data-discription" class="section level3">
+<h3>Data Discription</h3>
+<p><br> We use NOAA data from NOAA National Climatic Data Center, which can be accessed <a href="http://doi.org/10.7289/V5D21VHZ">here</a>. This dataset contains information about weather in NYC. It includes 2595176 observations of 7 variables. There are 747 stations in total. The number of NA in tmax is 1134358, and 381221 for snow. The variable names and interpetations are as follows: <br></p>
 <ul>
-<li>data description</li>
+<li>id: Weather station ID<br />
+</li>
+<li>date: Date of observation<br />
+</li>
+<li>prcp: Precipitation (tenths of mm)<br />
+</li>
+<li>snow: Snowfall (mm)<br />
+</li>
+<li>snwd: Snow depth (mm)<br />
+</li>
+<li>tmax: Maximum temperature (tenths of degrees C)<br />
+</li>
+<li>tmin: Minimum temperature (tenths of degrees C)</li>
 </ul>
-<p>Here is the <a href="https://ds-hw6-lg2973-wp2241.shinyapps.io/ds_hw6_problem-2/">dashiboard</a></p>
+<p><br></p>
+</div>
+<div id="how-we-created-the-graphs" class="section level3">
+<h3>How We Created the Graphs</h3>
+<div id="problem-1" class="section level4">
+<h4>Problem 1</h4>
+<p>Here is the <a href="https://wp2241.github.io/p8105_hw6_wp2241/">dashboard</a> for problem 1.  </p>
+<div id="step1-cleaning-data" class="section level5">
+<h5>Step1: Cleaning Data</h5>
+<p>We first cleaned the dataset’s variable names, and filtered the data so that it only contains data from station USC00300085. We only selected data from one station because it is difficult for Rstudio to process such a large dataset. Then we used “mutate” and “separate” functions to change the date variable into three variables called “year”, “month” and “day”. In the new dataset “data_nynoaa”, the only contained variables were “id”, “year”, “month”, “tmax” and “tmin”. Then we omitted all NA values to make dataset more clean.</p>
+</div>
+<div id="step-2-make-plots" class="section level5">
+<h5>Step 2: Make Plots</h5>
+<ul>
+<li><p>Boxplot: The boxplot on the left shows the distribution of maximum tempreture in each month of observations from station USC00300085. We grouped the “data_nynoaa” by month, then used “month” as x-value and tmax as y-value in the “plot_ly” function to create the plot. The color is by month.</p></li>
+<li><p>Scatter Plot: The scatter plot on the upper right shows the mean maximum tempreture and mean minimum tempreture in each month of observations from station USC00300085. We still used the “data_nynoaa” data, and grouped by month. Then we created two new variables using “mutate” function, which were defined as the mean of maximum/minimum tempreture in each month. Then we used “plot_ly” to create the plot, using month as x-value and mean tmax/tmin as y-values.</p></li>
+<li><p>Bar Chart: The bar chart shows the number of days with maximum tempreture exceeds 100 in each month of observations from station USC00300085. We filtered the “data_nynoaa” and created the plot.</p></li>
+</ul>
+</div>
+</div>
+<div id="problem-2" class="section level4">
+<h4>Problem 2</h4>
+<p>Here is the <a href="https://ds-hw6-lg2973-wp2241.shinyapps.io/ds_hw6_problem-2/">dashiboard</a> for problem 2.  </p>
+<div id="step1-cleaning-data-1" class="section level5">
+<h5>Step1: Cleaning Data</h5>
+<p>For problem 2, we used similar steps in problem 1 to process the dataset.</p>
+</div>
+<div id="step-2-make-plots-1" class="section level5">
+<h5>Step 2: Make Plots</h5>
+<ul>
+<li><p>Boxplot: We used similar steps to make the boxplot as in problem 1. Note that we also employed “renderPlotly” to make interactive plots. In this case, we filtered stations and year range to enable the selection.</p></li>
+<li><p>Scatter Plot: It is the same scatter plot as in problem 1. Note that Note that we also employed “renderPlotly” to make interactive plots. In this case, we filtered stations and year range to enable the selection.</p></li>
+<li><p>Bar Chart: The bar chart shows the number of days with maximum tempreture exceeds 100 in each month of observations from station USC00300085. We filtered stations and year range to enable the selection.</p></li>
+</ul>
+<p><br></p>
+<div id="the-repository-for-problem-1-is-here." class="section level6">
+<h6>The repository for problem 1 is <a href="https://github.com/WP2241/p8105_hw6_wp2241.git">here</a>.</h6>
+</div>
+<div id="the-repository-for-problem-2-is-here." class="section level6">
+<h6>The repository for problem 2 is <a href="https://github.com/ganluganlu/ds_hw6_problem-2.git">here</a>.</h6>
+</div>
+<div id="the-repository-for-problem-3-is-here." class="section level6">
+<h6>The repository for problem 3 is <a href="https://github.com/ganluganlu/ds_hw6_problem3.git">here</a>.</h6>
+</div>
+</div>
+</div>
 </div>
 
 

@@ -1,14 +1,60 @@
 ---
-title: "p8105_hw5_lg2973&wp2241"
+title: "P8105 HW6"
 ---
+### Authors: Lu Gan (lg2973) & Weixin Peng (wp2241)
 
-### Problem 1
-* data description
+<br>
 
-Here is the [dashboard](https://wp2241.github.io/p8105_hw6_wp2241/)
+### Data Discription
+<br>
+We use NOAA data from NOAA National Climatic Data Center, which can be accessed [here](http://doi.org/10.7289/V5D21VHZ). This dataset contains information about weather in NYC. It includes 2595176 observations of 7 variables. There are 747 stations in total. The number of NA in tmax is 1134358, and 381221 for snow. The variable names and interpetations are as follows:
+<br>
+
+* id: Weather station ID\
+* date: Date of observation\
+* prcp: Precipitation (tenths of mm)\
+* snow: Snowfall (mm)\
+* snwd: Snow depth (mm)\
+* tmax: Maximum temperature (tenths of degrees C)\
+* tmin: Minimum temperature (tenths of degrees C)
+
+<br>
+
+### How We Created the Graphs
+#### Problem 1
+Here is the [dashboard](https://wp2241.github.io/p8105_hw6_wp2241/) for problem 1. \ 
+
+##### Step1: Cleaning Data
+ We first cleaned the dataset's variable names, and filtered the data so that it only contains data from station USC00300085. We only selected data from one station because it is difficult for Rstudio to process such a large dataset. Then we used "mutate" and "separate" functions to change the date variable into three variables called "year", "month" and "day". In the new dataset "data_nynoaa", the only contained variables were "id", "year", "month", "tmax" and "tmin". Then we omitted all NA values to make dataset more clean. 
+ 
+##### Step 2: Make Plots
+ 
+ * Boxplot: The boxplot on the left shows the distribution of maximum tempreture in each month of observations from station USC00300085. We grouped the "data_nynoaa" by month, then used "month" as x-value and tmax as y-value in the "plot_ly" function to create the plot. The color is by month. 
+ 
+ * Scatter Plot: The scatter plot on the upper right shows the mean maximum tempreture and mean minimum tempreture in each month of observations from station USC00300085. We still used the "data_nynoaa" data, and grouped by month. Then we created two new variables using "mutate" function, which were defined as the mean of maximum/minimum tempreture in each month. Then we used "plot_ly" to create the plot, using month as x-value and mean tmax/tmin as y-values.
+ 
+ * Bar Chart: The bar chart shows the number of days with maximum tempreture exceeds 100 in each month of observations from station USC00300085. We filtered the "data_nynoaa" and created the plot. 
 
 
-### Problem 2
-* data description
+#### Problem 2
+Here is the [dashiboard](https://ds-hw6-lg2973-wp2241.shinyapps.io/ds_hw6_problem-2/) for problem 2. \ 
 
-Here is the [dashiboard](https://ds-hw6-lg2973-wp2241.shinyapps.io/ds_hw6_problem-2/)
+##### Step1: Cleaning Data
+ For problem 2, we used similar steps in problem 1 to process the dataset. 
+ 
+##### Step 2: Make Plots
+ 
+ * Boxplot: We used similar steps to make the boxplot as in problem 1. Note that we also employed "renderPlotly" to make interactive plots. In this case, we filtered stations and year range to enable the selection. 
+ 
+ * Scatter Plot: It is the same scatter plot as in problem 1. Note that Note that we also employed "renderPlotly" to make interactive plots. In this case, we filtered stations and year range to enable the selection. 
+ 
+ * Bar Chart: The bar chart shows the number of days with maximum tempreture exceeds 100 in each month of observations from station USC00300085. We filtered stations and year range to enable the selection.
+ 
+   <br>
+ 
+###### The repository for problem 1 is [here](https://github.com/WP2241/p8105_hw6_wp2241.git).
+
+###### The repository for problem 2 is [here](https://github.com/ganluganlu/ds_hw6_problem-2.git).  
+
+###### The repository for problem 3 is [here](https://github.com/ganluganlu/ds_hw6_problem3.git).
+
