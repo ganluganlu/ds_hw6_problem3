@@ -11,8 +11,4 @@ Here is the [dashboard](https://wp2241.github.io/p8105_hw6_wp2241/)
 ### Problem 2
 * data description
 
-* graph 1
-
-* graph 2
-
-* graph 3
+Here is the [dashiboard](https://ds-hw6-lg2973-wp2241.shinyapps.io/ds_hw6_problem-2/)
