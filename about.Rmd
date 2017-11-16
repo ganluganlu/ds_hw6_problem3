@@ -1,9 +1,27 @@
 ---
-title: "About"
+title: "P8105 HW6"
 ---
 
-### About this site
+\newline
 
-Sometimes you need to say a bit about the site -- how it was made, where it's hosted, where the source code can be found. 
+### Authors: Lu Gan (lg2973) & Weixin Peng (wp2241)
+<br>
+\newline
 
-If this is for a project or analysis, I recommend giving some details about the R package versions that you used to create the content.
+Dataset can be accessed [here](http://doi.org/10.7289/V5D21VHZ) from the NOAA NAtional Climatic Data Center, on August 15, 2017.(Menne, M.J., I. Durre, B. Korzeniewski, S. McNeal, K. Thomas, X. Yin, S. Anthony, R. Ray, R.S. Vose, B.E.Gleason, and T.G. Houston, 2012: Global Historical Climatology Network - Daily (GHCN-Daily), Version 3.22.)
+  
+<br>
+
+  In this assignment, we used the following packages in R Version 1.1.383: 
+  
+\newline
+
+  library(tidyverse)\
+  library(janitor)\
+  library(ggplot2)\
+  library(stringr)\
+  library(forcats)\
+  library(viridis)\
+  library(plotly)\
+  library(flexdashboard)
+
